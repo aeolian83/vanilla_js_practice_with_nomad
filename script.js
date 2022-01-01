@@ -1,14 +1,10 @@
-let a = 5;
-var b = 2;
+const amIFat = true;
+const amIHandsome = null;
+const amIFemale = false;
+let amIGenius;
 
-let myName = "Jungki";
-const veryLongVarianbleName = 0;
+console.log(amIFat);
+console.log(amIHandsome);
+console.log(amIFemale);
+console.log(amIGenius);
 
-console.log(a + b);
-console.log(a * b);
-console.log(a / b);
-console.log("Hello " + myName);
-
-myName = "Son"
-
-console.log("Your new name is " + myName);
