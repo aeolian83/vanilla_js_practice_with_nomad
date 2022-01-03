@@ -1,8 +1,7 @@
 function sayHello(){
-    console.log("Hello!");
+    console.log("Hello my name is ");
 }
 
-sayHello()
-sayHello()
-sayHello()
-sayHello()
+
+console.log("Hello!");
+sayHello("nico")
