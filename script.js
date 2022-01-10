@@ -25,6 +25,29 @@ function handMouseLeave(){
     title.innerText = "Mouse is Gone!!";
 }
 
-title.addEventListener("click", handTitleClick);
+function handWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handWindowCopy(){
+    alert("copier!!");
+}
+
+function handWindowOffline(){
+    alert("SOS no WIFI");
+}
+
+function handWindowOnline(){
+    alert("All good!!");
+}
+
+title.onclick = handTitleClick;  // 이렇게 하는 것은 그렇게 좋지는 않다. 
 title.addEventListener("mouseenter", handMouseEnter);
 title.addEventListener("mouseleave", handMouseLeave);
+
+// title.removeEventListener()
+
+window.addEventListener("resize", handWindowResize);
+window.addEventListener("copy", handWindowCopy);
+window.addEventListener("offline", handWindowOffline);
+window.addEventListener("online", handWindowOnline);
