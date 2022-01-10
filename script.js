@@ -1,53 +1,34 @@
-const title = document.querySelector(".hello h1");
+const h1 = document.querySelector(".hello h1");
 
-// console.log(title);
-// console.dir(title);
+console.dir(h1);
 
-// title.style.color = "teal";
+//function handTitleClick(){
+//    if(h1.style.color === "blue") {
+//        h1.style.color = "tomato";
+//    } else {
+//        h1.style.color = "blue";
+//    }
+//}
 
 // function handTitleClick(){
-//     console.log("Title wad clicked!!");
+//     const currentColor = h1.style.color;
+//     let newColor;
+//     if(currentColor === "blue") {
+//         newColor = "tomato";
+//     } else {
+//         newColor = "blue";
+//     }
+//     h1.style.color = newColor;
 // }
 
-// title.addEventListener("click", handTitleClick);
-
-console.dir(title);
-
 function handTitleClick(){
-    title.style.color = "teal";
+    const currentColor = h1.style.color;
+    if(currentColor === "blue") {
+        currentColor = "tomato";
+    } else {
+        currentColor = "blue";
+    }
+    h1.style.color = currentColor;
 }
 
-function handMouseEnter (){
-    title.innerText = "Mouse is Here!!";
-}
-
-function handMouseLeave(){
-    title.innerText = "Mouse is Gone!!";
-}
-
-function handWindowResize(){
-    document.body.style.backgroundColor = "tomato";
-}
-
-function handWindowCopy(){
-    alert("copier!!");
-}
-
-function handWindowOffline(){
-    alert("SOS no WIFI");
-}
-
-function handWindowOnline(){
-    alert("All good!!");
-}
-
-title.onclick = handTitleClick;  // 이렇게 하는 것은 그렇게 좋지는 않다. 
-title.addEventListener("mouseenter", handMouseEnter);
-title.addEventListener("mouseleave", handMouseLeave);
-
-// title.removeEventListener()
-
-window.addEventListener("resize", handWindowResize);
-window.addEventListener("copy", handWindowCopy);
-window.addEventListener("offline", handWindowOffline);
-window.addEventListener("online", handWindowOnline);
+h1.addEventListener("click", handTitleClick);
