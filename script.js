@@ -19,7 +19,7 @@ function handTitleClick(){
     if(h1.className === clickedClass) {
         h1.className = "";
     } else {
-        h1.className = clickedClass;
+        h1.className = clickedClass;  // 이렇게 하면 말그대로 클래스를 바꿔 버림, 혹시라도 이전에 다른 클래스가 있다면 그런 사라진다.
     }
 }
 
