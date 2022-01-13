@@ -14,18 +14,13 @@ console.dir(h1);
 //     h1.className = "active";
 // }
 
-// function handTitleClick(){
-//     const clickedClass = "clicked"
-//     if(h1.classList.contains(clickedClass)) {
-//         h1.classList.remove(clickedClass);
-//     } else {
-//         h1.classList.add(clickedClass);  // 이렇게 하면 말그대로 클래스를 바꿔 버림, 혹시라도 이전에 다른 클래스가 있다면 그런 사라진다.
-//     }
-// }
-
 function handTitleClick(){
     const clickedClass = "clicked"
-    h1.classList.toggle(clickedClass);
+    if(h1.className === clickedClass) {
+        h1.className = "";
+    } else {
+        h1.className = clickedClass;  // 이렇게 하면 말그대로 클래스를 바꿔 버림, 혹시라도 이전에 다른 클래스가 있다면 그런 사라진다.
+    }
 }
 
 h1.addEventListener("click", handTitleClick);
