@@ -15,7 +15,7 @@ function resizeBackground() {
 
 function reportWindowSize() {
   heightOutput.textContent = window.innerHeight;
-  widthOutput.textContent = window.innerWidth;
+  widthOutput.innerText = window.innerWidth;
 }
 
 // window.onresize = resizeBackground;
