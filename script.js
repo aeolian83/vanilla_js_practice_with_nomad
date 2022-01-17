@@ -1,31 +1,31 @@
-const h1 = document.querySelector(".hello h1");
+const loginform = document.querySelector(".login-form");
+const loginInput = document.querySelector(".login-form input");
+const loginButton = document.querySelector(".login-form button");
 
-console.dir(h1);
 
-// function handTitleClick(){
-//    if(h1.style.color === "blue") {
-//        h1.style.color = "tomato";
-//    } else {
-//        h1.style.color = "blue";
-//    }
-// }
 
-// function handTitleClick(){
-//     h1.className = "active";
-// }
-
-// function handTitleClick(){
-//     const clickedClass = "clicked"
-//     if(h1.classList.contains(clickedClass)) {
-//         h1.classList.remove(clickedClass);
-//     } else {
-//         h1.classList.add(clickedClass);  // 이렇게 하면 말그대로 클래스를 바꿔 버림, 혹시라도 이전에 다른 클래스가 있다면 그런 사라진다.
+// function handleLoginBtnClick() {
+//     const username = loginInput.value;
+//     if (username === "") {
+//         alert("Please whrite your name");
+//     } else if(username.length > 15) {
+//         alert("Your name is too long.");
 //     }
 // }
 
-function handTitleClick(){
-    const clickedClass = "clicked"
-    h1.classList.toggle(clickedClass);
+
+// function onLoginSubmit(tomato) {
+//     tomato.preventDefault();
+//     // const username = loginInput.value;
+//     // console.log(username);
+//     console.log(tomato);
+// }
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    console.log(loginInput.value);
 }
 
-h1.addEventListener("click", handTitleClick);
+// loginButton.addEventListener("click", handleLoginBtnClick)
+
+loginform.addEventListener("submit", onLoginSubmit);
