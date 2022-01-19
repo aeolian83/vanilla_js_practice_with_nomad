@@ -16,5 +16,5 @@ function getClock() {
 // console.log("1".padEnd(3, "0"));
 // console.log("hello".padStart(10, "x"));
 
-getClock()
+getClock();
 setInterval(getClock, 1000);
